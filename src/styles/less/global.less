@@ -1,0 +1,64 @@
+// variables
+
+@primary-color: #1b4c82;
+@secondary-color: #f97954;
+
+body{
+  padding:0;
+}
+
+#main-navbar{
+  background: @primary-color;
+  padding: 5px 0;
+  h5{
+    color: #eee;
+    font-size: 20px;
+    small{
+      margin-left: 10px;
+      color: @secondary-color
+    }
+  }
+  h6{
+    color: #eee;
+  }
+  ul{
+    margin:0;
+    padding:0;
+    text-align: center;
+    li{
+      display:inline-block;
+      margin: 5px;
+      a{
+        span{
+        color: #fff;;
+        background: @secondary-color;
+          display:inline-block;
+          padding: 5px 8px;
+          transition: all ease 0.3s;
+        }
+        .fa{
+          color: #fff;;
+          background: @secondary-color;
+          display:inline-block;
+          padding: 8px 10px;
+          transition: all ease 0.3s;
+
+        }
+      }
+      a:hover,a.current{
+        span{
+          color: @primary-color;
+          background: #fff;
+        }
+        .fa{
+          color: #fff;;
+          background: @secondary-color;
+        }
+      }
+    }
+  }
+}
+
+#main-content{
+  padding: 35px 0 25px 0;
+}

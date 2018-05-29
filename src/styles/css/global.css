@@ -1,0 +1,54 @@
+body {
+  padding: 0;
+}
+#main-navbar {
+  background: #1b4c82;
+  padding: 5px 0;
+}
+#main-navbar h5 {
+  color: #eee;
+  font-size: 20px;
+}
+#main-navbar h5 small {
+  margin-left: 10px;
+  color: #f97954;
+}
+#main-navbar h6 {
+  color: #eee;
+}
+#main-navbar ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+#main-navbar ul li {
+  display: inline-block;
+  margin: 5px;
+}
+#main-navbar ul li a span {
+  color: #fff;
+  background: #f97954;
+  display: inline-block;
+  padding: 5px 8px;
+  transition: all ease 0.3s;
+}
+#main-navbar ul li a .fa {
+  color: #fff;
+  background: #f97954;
+  display: inline-block;
+  padding: 8px 10px;
+  transition: all ease 0.3s;
+}
+#main-navbar ul li a:hover span,
+#main-navbar ul li a.current span {
+  color: #1b4c82;
+  background: #fff;
+}
+#main-navbar ul li a:hover .fa,
+#main-navbar ul li a.current .fa {
+  color: #fff;
+  background: #f97954;
+}
+#main-content {
+  padding: 35px 0 25px 0;
+}

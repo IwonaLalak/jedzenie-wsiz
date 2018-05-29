@@ -52,3 +52,6 @@ body {
 #main-content {
   padding: 35px 0 25px 0;
 }
+.react-bs-table-container table {
+  margin-bottom: 0;
+}

@@ -8,7 +8,7 @@ export default{
     },
 
     APP_AUTHORS(){
-        return 'Iwona Lalak & Konrad Krężel'
+        return 'Iwona Lalak (front) & Konrad Krężel (back)'
     },
 
     HOST_API(){

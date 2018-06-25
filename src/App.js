@@ -5,7 +5,11 @@ import LoginContainer from "./views/login/LoginContainer";
 import NewOrderContainer from "./views/new_order/NewOrderContainer";
 import RestaurantsContainer from "./views/restaurants/RestaurantsContainer";
 import LoginService from "./views/login/LoginService";
+import axios from 'axios'
 
+axios.defaults.headers.post['Content-Type'] = 'application/json';
+axios.defaults.headers.put['Content-Type'] = 'application/json';
+axios.defaults.headers.common.Authorization = 'Basic ' + btoa('jedzenie' + ':' + 'jedzenie')
 
 class App extends Component {
     constructor(props) {

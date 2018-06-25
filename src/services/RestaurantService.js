@@ -23,8 +23,8 @@ export default{
     editRestaurant(id, data) {
         return axios(
             {
-                url: URL + id,
-                method: 'put',
+                url: URL,// + id,
+                method: 'post',
                 data: JSON.stringify(data),
             }
         )

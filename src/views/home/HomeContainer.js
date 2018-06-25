@@ -8,6 +8,10 @@ export default class HomeContainer extends Component {
         this.state = {};
     }
 
+    componentDidMount(){
+        //console.log(this.props.history)
+    }
+
     render() {
         return (
             <div>

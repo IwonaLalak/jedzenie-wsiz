@@ -137,7 +137,7 @@ export const ButtonAction = (props) => {
         <Button
             onClick={props.onClick}
             bsSize={props.size}
-            bsStyle={'info'}
+            bsStyle={'primary'}
             style={{...props.customstyle}}
             block={props.block}
             disabled={props.disabled}

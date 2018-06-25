@@ -40,7 +40,6 @@ export default class RestaurantsContainer extends Component {
     }
 
     onClickSave(obj, isEdition) {
-        console.log(obj)
         if (isEdition) {
             obj = Object.assign(obj, {restaurantId:this.state.editedRestaurant.restaurantId})
 

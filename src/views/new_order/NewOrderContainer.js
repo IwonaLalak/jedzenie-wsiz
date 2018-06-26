@@ -4,6 +4,7 @@ import {Col, Grid, Row} from "react-bootstrap";
 import NewOrderForm from "./components/NewOrderForm";
 import RestaurantService from "../../services/RestaurantService";
 import OrdersService from "../../services/OrdersService";
+import {ButtonAdd, ButtonDef} from "../../shared_components/Buttons";
 
 export default class NewOrderContainer extends Component {
     constructor(props) {
@@ -40,6 +41,7 @@ export default class NewOrderContainer extends Component {
                     <Grid fluid={false}>
                         <Row>
                             <Col xs={12}>
+
                                 <NewOrderForm restaurants={this.state.restaurants} handleSaveNewOrder={this.onClickSaveNewOrder}/>
                             </Col>
                         </Row>

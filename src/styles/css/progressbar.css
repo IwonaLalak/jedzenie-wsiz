@@ -1,0 +1,16 @@
+#nprogress .peg {
+  display: none !important;
+}
+#nprogress .bar {
+  /* height:3px !important;
+    top: 49px !important;
+    position: absolute !important;*/
+}
+#nprogress .spinner {
+  top: auto !important;
+  bottom: 15px !important;
+}
+#nprogress .spinner .spinner-icon {
+  /*      border-top-color: @primary-color !important;
+      border-left-color: @primary-color !important;*/
+}

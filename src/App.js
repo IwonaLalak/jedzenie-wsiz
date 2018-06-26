@@ -6,7 +6,10 @@ import NewOrderContainer from "./views/new_order/NewOrderContainer";
 import RestaurantsContainer from "./views/restaurants/RestaurantsContainer";
 import LoginService from "./views/login/LoginService";
 import axios from 'axios'
+import {loadProgressBar} from 'axios-progress-bar'
+import 'axios-progress-bar/dist/nprogress.css';
 
+loadProgressBar();
 axios.defaults.headers.post['Content-Type'] = 'application/json';
 axios.defaults.headers.put['Content-Type'] = 'application/json';
 axios.defaults.headers.common.Authorization = 'Basic ' + btoa('jedzenie' + ':' + 'jedzenie')

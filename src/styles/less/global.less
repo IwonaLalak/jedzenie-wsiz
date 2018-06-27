@@ -2,11 +2,12 @@
 
 body{
   padding:0;
+  font-size: 16px;
 }
 
 #main-navbar{
   background: @primary-color;
-  padding: 5px 0;
+  padding: 8px 0;
   h5{
     color: #eee;
     font-size: 20px;
@@ -27,6 +28,7 @@ body{
       margin: 5px;
       a{
         span{
+
         color: #fff;;
         background: @secondary-color;
           display:inline-block;
@@ -34,6 +36,8 @@ body{
           transition: all ease 0.3s;
         }
         .fa{
+          position:relative;
+          top:1px;
           color: #fff;;
           background: @secondary-color;
           display:inline-block;
@@ -58,6 +62,12 @@ body{
 
 #main-content{
   padding: 35px 0 25px 0;
+
+  h6{
+    font-size: 16px;
+    color: @primary-color-lightest;
+    font-style: italic;
+  }
 }
 
 .react-bs-table-container{

@@ -45,12 +45,12 @@ export default class Navbar extends Component {
                         </Col>
                         <Col xs={2}>
                             <div className={'pull-right'}>
-                                <h6>
+                                <h5>
                                     <span style={{marginRight: '15px'}}>
                                        {Boolean(LoginService.getCurrentUser())? " Witaj, "+LoginService.getCurrentUser().login : ''}
                                     </span>
                                     <ButtonDef onClick={this.onClickLogout} icon={'fa fa-sign-out'} text={'Wyloguj się'} style={'default'} size={'xs'}/>
-                                </h6>
+                                </h5>
                             </div>
                         </Col>
                     </Row>

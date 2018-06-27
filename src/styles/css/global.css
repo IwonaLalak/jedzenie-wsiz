@@ -1,9 +1,10 @@
 body {
   padding: 0;
+  font-size: 16px;
 }
 #main-navbar {
   background: #1b4c82;
-  padding: 5px 0;
+  padding: 8px 0;
 }
 #main-navbar h5 {
   color: #eee;
@@ -33,6 +34,8 @@ body {
   transition: all ease 0.3s;
 }
 #main-navbar ul li a .fa {
+  position: relative;
+  top: 1px;
   color: #fff;
   background: #f97954;
   display: inline-block;
@@ -51,6 +54,11 @@ body {
 }
 #main-content {
   padding: 35px 0 25px 0;
+}
+#main-content h6 {
+  font-size: 16px;
+  color: #6295d3;
+  font-style: italic;
 }
 .react-bs-table-container table {
   margin-bottom: 0;

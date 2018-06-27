@@ -1,3 +1,13 @@
+#HomeContainer #noOrdersAlert {
+  margin-top: 30px;
+  color: #f97954;
+  text-align: center;
+}
+#HomeContainer #noOrdersAlert a {
+  margin-top: 10px;
+  display: inline-block;
+  color: #1b4c82;
+}
 #HomeContainer .orderTabTitle h1 {
   margin: 0;
   font-size: 24px;
@@ -12,4 +22,43 @@
 }
 #HomeContainer .orderTabTitle h2 span:nth-of-type(2) {
   margin-left: 15px;
+}
+#HomeContainer .orderTabContent {
+  margin-top: 30px;
+}
+#HomeContainer .orderTabContent h1,
+#HomeContainer .orderTabContent h2 {
+  display: inline-block;
+}
+#HomeContainer .orderTabContent h1 {
+  margin: 0;
+  font-size: 40px;
+  color: #1b4c82;
+  font-weight: bold;
+}
+#HomeContainer .orderTabContent h2 {
+  margin: 0;
+  margin-left: 15px;
+  font-size: 24px;
+  color: #f97954;
+}
+#HomeContainer .orderTabContent h2 span:nth-of-type(2) {
+  margin-left: 15px;
+}
+#HomeContainer .orderTabContent .individualOrdersContainer {
+  margin-top: 15px;
+}
+#HomeContainer .orderTabContent .individualOrdersContainer .individualItem {
+  margin-top: 10px;
+  padding: 10px;
+}
+#HomeContainer .orderTabContent .individualOrdersContainer .individualItem:first-of-type {
+  font-weight: bold;
+  border-bottom: 3px solid #f97954;
+}
+#HomeContainer .orderTabContent #orderAlreadyAdded {
+  margin-top: 25px;
+  margin-left: 5px;
+  color: gray;
+  font-style: italic;
 }

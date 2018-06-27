@@ -1,21 +1,75 @@
 @import "variables";
 
-#HomeContainer{
-  .orderTabTitle{
-    h1{
-      margin:0;
+#HomeContainer {
+
+  #noOrdersAlert {
+    margin-top: 30px;
+    color: @secondary-color;
+    text-align: center;
+    a {
+      margin-top: 10px;
+      display: inline-block;
+      color: @primary-color
+    }
+  }
+
+  .orderTabTitle {
+    h1 {
+      margin: 0;
       font-size: 24px;
-      color:@primary-color;
+      color: @primary-color;
       font-weight: bold;
     }
-    h2{
-      margin-top:10px;
-      margin-bottom:0;
+    h2 {
+      margin-top: 10px;
+      margin-bottom: 0;
       font-size: 16px;
-      color:@secondary-color;
-      span:nth-of-type(2){
-        margin-left:15px;
+      color: @secondary-color;
+      span:nth-of-type(2) {
+        margin-left: 15px;
       }
     }
+  }
+  .orderTabContent {
+    margin-top: 30px;
+    h1, h2 {
+      display: inline-block;
+    }
+    h1 {
+      margin: 0;
+      font-size: 40px;
+      color: @primary-color;
+      font-weight: bold;
+    }
+    h2 {
+      margin: 0;
+      margin-left: 15px;
+      font-size: 24px;
+      color: @secondary-color;
+      span:nth-of-type(2) {
+        margin-left: 15px;
+      }
+    }
+
+    .individualOrdersContainer {
+      margin-top: 15px;
+
+      .individualItem {
+        margin-top: 10px;
+        padding: 10px;
+      }
+      .individualItem:first-of-type {
+        font-weight: bold;
+        border-bottom: 3px solid @secondary-color;
+      }
+    }
+
+    #orderAlreadyAdded {
+      margin-top: 25px;
+      margin-left: 5px;
+      color: gray;
+      font-style: italic;
+    }
+
   }
 }

@@ -32,7 +32,6 @@ export default class NewOrderForm extends Component {
         else {
             this.setState({order: e.target.value})
         }
-
     }
 
     onChangeTime(e){

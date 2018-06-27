@@ -4,6 +4,7 @@ import OrdersService from "../../services/OrdersService";
 import {Col, Grid, Row, Tab, Tabs} from "react-bootstrap";
 import HomeTab from "./components/HomeTab";
 import RestaurantService from "../../services/RestaurantService";
+import {Link} from "react-router-dom";
 
 
 export default class HomeContainer extends Component {
@@ -12,8 +13,12 @@ export default class HomeContainer extends Component {
         this.state = {
             orders:[],
             restaurants:[],
+            activeKey:0
         };
         this.renderTabs = this.renderTabs.bind(this)
+        this.getTodayOrders = this.getTodayOrders.bind(this)
+        this.onDeleteOrder = this.onDeleteOrder.bind(this)
+        this.handleSelect = this.handleSelect.bind(this)
     }
 
     componentDidMount(){
@@ -31,6 +36,16 @@ export default class HomeContainer extends Component {
         OrdersService.getOrders().then(function (response) {
             this.setState({orders:response.data})
         }.bind(this))
+    }
+
+
+    onDeleteOrder(){
+        this.getTodayOrders()
+        this.setState({ activeKey:0 });
+    }
+
+    handleSelect(key) {
+        this.setState({ activeKey:key });
     }
 
     renderTabTitle(order){
@@ -66,18 +81,27 @@ export default class HomeContainer extends Component {
 
     renderTabs(){
         if(this.state.orders.length>0){
-            return this.state.orders.map(order=>{
+            return this.state.orders.map((order,index)=>{
                 return(
-                    <Tab eventKey={1} title={this.renderTabTitle(order)}>
-                        <HomeTab order={order}/>
+                    <Tab eventKey={index} title={this.renderTabTitle(order)}>
+                        <HomeTab order={order} restaurants={this.state.restaurants}
+                                 handleRefreshData={this.getTodayOrders}
+                                 handleRefreshDataAfterDeletingOrder={this.onDeleteOrder}
+                                 {...this.props}
+                        />
                     </Tab>
                 )
             })
         }
         else
             return (
-                <Tab eventKey={1} title="Brak zamówień na dziś">
-                Nikt nie złożył dzisiaj jeszcze zamówienia - bądź pierwszy
+                <Tab eventKey={0} title="Brak zamówień na dziś">
+                    <h1 id={'noOrdersAlert'}>
+                        <div>
+                        Nikt nie złożył dzisiaj jeszcze zamówienia
+                        </div>
+                        <Link to={'/neworder'}>bądź pierwszy <i className={'fa fa-cutlery'}></i></Link>
+                    </h1>
                 </Tab>
             )
     }
@@ -90,7 +114,8 @@ export default class HomeContainer extends Component {
                     <Grid fluid={false} id={'HomeContainer'}>
                         <Row>
                             <Col xs={12}>
-                                <Tabs defaultActiveKey={1} id="uncontrolled-tab-example">
+                                <Tabs activeKey={this.state.activeKey} id="tab-orders"
+                                      onSelect={this.handleSelect}>
                                     {
                                         this.renderTabs()
                                     }
